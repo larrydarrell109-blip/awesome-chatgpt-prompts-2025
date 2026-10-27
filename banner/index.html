@@ -3,145 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PebPop 视频 Banner</title>
+  <title>横屏视频 Banner</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,560&family=Noto+Sans+SC:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="stage">
-    <section class="col-hero">
-      <header class="intro">
-        <p class="kicker">PebPop · 首页</p>
-        <h1>横屏视频 Banner</h1>
-        <p class="lede">同一张 16:9 卡片里轮播五支模板。右上角叠着接下来的画面，点叠图、滑一下，或者等它自己换。</p>
-        <p class="now" id="now" aria-live="polite"></p>
-      </header>
-      <div id="hero-mount"></div>
-      <div class="chips" id="chips"></div>
-      <p class="note">预览片只用来看版式，没有音轨。把闪身步.mp4、小狗撒钞.mov、neon舞蹈.mp4、风扇变装.mp4、舞蹈运镜.mp4 放进 banner/media，同名覆盖即可。</p>
-    </section>
-
-    <section class="col-phone" aria-label="手机里的首页">
-      <div class="device">
-        <div class="screen">
-          <div class="statusbar">
-            <span class="clock">10:53</span>
-            <span class="sys" aria-hidden="true">
-              <svg viewBox="0 0 18 12" width="16" height="12"><rect x="0" y="7" width="3" height="5" rx="0.6" fill="currentColor"/><rect x="5" y="4" width="3" height="8" rx="0.6" fill="currentColor"/><rect x="10" y="2" width="3" height="10" rx="0.6" fill="currentColor"/><rect x="15" y="0" width="3" height="12" rx="0.6" fill="currentColor" opacity=".35"/></svg>
-              <svg viewBox="0 0 16 12" width="15" height="12"><path d="M8 10.2l1.3-1.4a2 2 0 0 0-2.6 0L8 10.2z" fill="currentColor"/><path d="M4.2 6.4a5.2 5.2 0 0 1 7.6 0" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M1.6 3.8a8.6 8.6 0 0 1 12.8 0" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-              <svg viewBox="0 0 27 13" width="24" height="12"><rect x="0.6" y="0.6" width="22" height="11.8" rx="3" fill="none" stroke="currentColor"/><rect x="2" y="2" width="16" height="9" rx="1.4" fill="currentColor"/><path d="M24 4.2h1.4a1.2 1.2 0 0 1 1.2 1.2v2.2a1.2 1.2 0 0 1-1.2 1.2H24z" fill="currentColor" opacity=".45"/></svg>
-            </span>
-          </div>
-
-          <div class="feed">
-            <div class="topbar">
-              <div class="logo">PebPop</div>
-              <div class="actions">
-                <button class="iconbtn gift" type="button" data-toast="礼物" aria-label="礼物">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="10" width="18" height="10" rx="2"/><path d="M3 10h18V8.5A1.5 1.5 0 0 0 19.5 7h-15A1.5 1.5 0 0 0 3 8.5V10zM12 7v13"/><path d="M12 7c0-2 2.2-3.4 3.6-2.1C16.6 6 15.2 7 12 7zM12 7c0-2-2.2-3.4-3.6-2.1C7.4 6 8.8 7 12 7z"/></svg>
-                </button>
-                <button class="pro" type="button" data-toast="PRO 会员">PRO</button>
-                <button class="iconbtn gear" type="button" data-toast="设置" aria-label="设置">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M12 3.2v2.2M12 18.6V21M3.2 12h2.2M18.6 12H21M5.6 5.6l1.6 1.6M16.8 16.8l1.6 1.6M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6" stroke-linecap="round"/></svg>
-                </button>
-              </div>
-            </div>
-
-            <div id="phone-mount"></div>
-
-            <div class="quicks">
-              <button type="button" data-toast="万能改图">
-                <span class="tile">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="5" width="14" height="12" rx="2"/><path d="M3 15l4-3 3 2 3-3"/><path d="M17 8l1.2-2.2L20.5 7 18.2 8.2 17 10.5 15.8 8.2 13.5 7l2.3-1.2L17 3.5 18.2 5.8 20.5 7"/></svg>
-                </span>
-                <span>万能改图</span>
-              </button>
-              <button type="button" data-toast="图生视频">
-                <span class="tile">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10.5l5-2.5v8l-5-2.5z"/></svg>
-                </span>
-                <span>图生视频</span>
-              </button>
-              <button type="button" data-toast="文生图">
-                <span class="tile">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="M7 15l2.5-2.5L12 15"/><path d="M17 4l.8 1.8L19.5 6.5 17.8 7.3 17 9l-.8-1.7L14.5 6.5l1.7-.7z"/></svg>
-                </span>
-                <span>文生图</span>
-              </button>
-              <button type="button" data-toast="更多">
-                <span class="tile">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="4" width="6.5" height="6.5" rx="1.4"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.4"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.4"/><path d="M15 16.8h5M17.5 14.3v5" stroke-linecap="round"/></svg>
-                </span>
-                <span>更多</span>
-              </button>
-            </div>
-
-            <section class="sec">
-              <div class="sec-h">
-                <h2>AI 魔法工具</h2>
-                <button class="more" type="button" data-toast="全部魔法工具">全部 ›</button>
-              </div>
-              <div class="hrow">
-                <article class="tcard">
-                  <img src="media/posters/fan.jpg" alt="">
-                  <span>AI 造型</span>
-                </article>
-                <article class="tcard">
-                  <img src="media/posters/neon.jpg" alt="">
-                  <span>视频高清</span>
-                </article>
-                <article class="tcard">
-                  <div class="ref">
-                    <div class="faces">
-                      <img src="media/posters/pup.jpg" alt="">
-                      <img src="media/posters/fan.jpg" alt="">
-                      <img src="media/posters/flash.jpg" alt="">
-                    </div>
-                    <div class="refbar"></div>
-                  </div>
-                  <span>多参考图片</span>
-                </article>
-              </div>
-            </section>
-
-            <section class="sec">
-              <div class="sec-h">
-                <h2>世界杯</h2>
-                <button class="more" type="button" data-toast="全部世界杯">全部 ›</button>
-              </div>
-              <div class="hrow cups">
-                <img src="media/posters/cam.jpg" alt="">
-                <img src="media/posters/neon.jpg" alt="">
-                <img src="media/posters/flash.jpg" alt="">
-              </div>
-            </section>
-          </div>
-
-          <nav class="tabbar" aria-label="底部导航">
-            <button class="tab on" type="button" data-toast="首页" aria-current="page">
-              <span class="bubble">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-8.5z"/></svg>
-              </span>
-            </button>
-            <button class="tab" type="button" data-toast="照片">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6" fill="currentColor" stroke="none"/><path d="M4 17l5-4 3 2 3-3 5 5"/></svg>
-              <span>照片</span>
-            </button>
-            <button class="tab" type="button" data-toast="视频">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="6" width="12" height="12" rx="2"/><path d="M15 10l6-3v10l-6-3z"/></svg>
-              <span>视频</span>
-            </button>
-            <button class="tab" type="button" data-toast="我的">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="9" r="3.2"/><path d="M5.5 19.2a6.5 6.5 0 0 1 13 0" stroke-linecap="round"/></svg>
-              <span>我的</span>
-            </button>
-          </nav>
-          <div class="toast" id="toast" role="status"></div>
-        </div>
-      </div>
-    </section>
+  <main class="app">
+    <header class="top">
+      <span>视频 Banner</span>
+      <span id="index" aria-hidden="true">01 / 05</span>
+    </header>
+    <div class="viewport" id="viewport" aria-roledescription="carousel" aria-label="横屏视频 Banner"></div>
+    <p class="theme-line" id="theme-line"></p>
+    <div class="themes" id="themes"></div>
   </main>
   <script src="app.js"></script>
 </body>
